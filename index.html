@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<title>Paolo Alberto Mongini - CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    body { background-color: #f1f1f1; margin: 0; }
+
+    /* STILE BUSINESS CARD INIZIALE */
+    #schermata-iniziale {
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        min-height: 100vh; padding: 20px;
+    }
+    .business-card {
+        background: white; max-width: 520px; width: 100%;
+        border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        text-align: center; border-top: 6px solid #009688;
+    }
+    .card-header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-top: 25px; border: 4px solid #f1f1f1; }
+    .card-body { padding: 25px; }
+    .card-body h2 { margin: 10px 0 5px 0; font-weight: bold; color: #333; }
+    .card-footer { background: #f9f9f9; padding: 15px; border-top: 1px solid #eee; }
+    .card-footer a { margin: 0 10px; color: #009688; text-decoration: none; }
+    
+    #btn-unlock { background: none; border: none; color: transparent; padding: 10px; cursor: pointer; width: 50px; height: 20px; }
+    #login-form { display: none; margin-top: 15px; }
+    #pass-input { padding: 8px; border: 1px solid #ddd; border-radius: 5px; outline: none; }
+    #btn-go { background: #009688; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
+
+    #contenuto-segreto { display: none; }
+
+    /* NUOVO STILE SKILLS SEMPLICE */
+/* NUOVO STILE SKILLS SEMPLICE */
+.skill-cat {
+    display: flex;
+    margin-bottom: 6px;
+}
+.skill-name {
+    font-weight: bold;
+    color: #333;
+    min-width: 150px;
+    flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+
+<div id="schermata-iniziale">
+    <div class="business-card">
+        <div class="card-header">
+            <img src="foto.jpg" alt="Paolo Alberto Mongini">
+        </div>
+          <div class="card-body">
+              <h2 style="font-size: 24px;">Paolo Alberto Mongini</h2>
+              
+              <p style="color: #009688; font-weight: 500; font-size: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                  <span style="flex: 1; text-align: right;">PhD Student @ UNIPV</span>
+                  <span style="margin: 0 15px;">|</span>
+                  <span style="flex: 1; text-align: left;">Visiting Researcher @ EPFL</span>
+              </p>
+              
+              <div style="display: flex; justify-content: center;">
+                  <div style="text-align: left; font-size: 14px; color: #555; white-space: nowrap;">
+                      <p style="margin: 6px 0; display: flex; align-items: center;">
+                          <i class="fa fa-university fa-fw" style="color: #777; margin-right: 10px; width: 20px;"></i> 
+                          <b style="width: 70px; display: inline-block;">PhD</b> 
+                          <span>in Electronics, Comp. Science and Elect. Engineering</span>
+                      </p>
+                      <p style="margin: 6px 0; display: flex; align-items: center;">
+                          <i class="fa fa-graduation-cap fa-fw" style="color: #777; margin-right: 10px; width: 20px;"></i> 
+                          <b style="width: 70px; display: inline-block;">Master</b> 
+                          <span>in Industrial Automation Engineering</span>
+                      </p>
+                      <p style="margin: 6px 0; display: flex; align-items: center;">
+                          <i class="fa fa-graduation-cap fa-fw" style="color: #777; margin-right: 10px; width: 20px;"></i> 
+                          <b style="width: 70px; display: inline-block;">Bachelor</b> 
+                          <span>in Industrial Engineering (Energy)</span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="card-footer">
+              <a href="mailto:paolo.mongini99@gmail.com">
+                  <i class="fa fa-envelope"></i>
+                  <span style="font-size: 12px; margin-left: 5px;">paolo.mongini99@gmail.com</span>
+              </a>
+              <a href="https://www.linkedin.com/in/paolo-mongini-8a3a18256/" target="_blank">
+                  <i class="fa fa-linkedin"></i>
+                  <span style="font-size: 12px; margin-left: 5px;">paolo-mongini</span>
+              </a>
+          </div>
+    </div>
+    <button id="btn-unlock" onclick="mostraLogin()"></button>
+    
+    <div id="login-form">
+        <input type="password" id="pass-input" placeholder="Password">
+        <button id="btn-go" onclick="controlla()">GO</button>
+    </div>
+</div>
+
+<div id="contenuto-segreto" class="w3-content w3-margin-top" style="max-width:1400px;">
+  <div class="w3-row-padding">
+    
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="foto.jpg" style="width:100%" alt="Paolo Alberto Mongini">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2 style="background: rgba(255,255,255,0.7); padding: 5px;">Paolo Alberto Mongini</h2>
+          </div>
+        </div>
+        <div class="w3-container" style="padding-top: 15px;">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>PhD Student</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Tortona, Italy</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>paolo.mogini99@gmail.com</p>
+
+          <p>
+            <a href="https://www.linkedin.com/in/paolo-mongini-8a3a18256/" target="_blank" style="text-decoration:none; color:inherit;">
+              <i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i>paolo-mongini
+            </a>
+          </p>
+
+          <p>
+            <a href="https://scholar.google.com/citations?user=yQ1itosAAAAJ" target="_blank" style="text-decoration:none; color:inherit;">
+              <i class="fa fa-mortar-board fa-fw w3-margin-right w3-large w3-text-teal"></i>Google Scholar
+            </a>
+          </p>
+
+          <hr>
+          
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Technical Skills</b></p>
+          
+          <div class="skill-cat">
+            <span class="skill-name">Programming:</span> Matlab, Simulink, Julia, C, Python, ST
+          </div>
+          
+          <div class="skill-cat">
+            <span class="skill-name">Machine Learning:</span> regression and classification models (SVM, MLP, neural networks), computer vision (CNNs), time-series modelling (LSTM, REN, SSM), Large Language Models (Transformer), machine learning libraries (Pytorch, TensorBoard, Optuna)
+          </div>
+          
+          <div class="skill-cat">
+            <span class="skill-name">Data Exploration:</span> Pandas, Numpy, Matplotlib
+          </div>
+          
+          <div class="skill-cat">
+            <span class="skill-name">Graphics/3D:</span> illustration (Affinity), 3D modeling (Inventor)
+          </div>
+          
+          <div class="skill-cat">
+            <span class="skill-name">Productivity:</span> Microsoft Office Suite, Google Workspace, Open Office, LaTeX
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-name">Versioning:</span> Git, Github, GitKraken
+          </div>
+
+
+          <p class="w3-large"><b><i class="fa fa-language fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                    
+          <div class="skill-cat">
+            <span class="skill-name">Italian:</span> Native speaker
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-name">English:</span> C1
+          </div>
+
+          <div class="skill-cat">
+            <span class="skill-name">Chinese:</span> A2
+          </div>
+
+          <br>
+        </div>
+      </div><br>
+    </div>
+
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>About Me</h2>
+        <div class="w3-container">
+          <p>I am a PhD student in Electronic, Computer Science, and Electrical Engineering at the University of Pavia, where I have been conducting research since 2021. My work focuses on the development, simulation, and testing of new techniques to improve diabetes management for patients treated with artificial pancreas.
+          
+          Starting from glucose sensor readings, I work with my research group on the development of fault detection methods, machine learning models, and control techniques aimed at keeping patients’ glycemia within a safe range by acting on insulin pumps in a closed-loop framework.
+          
+          Furthermore, I have the opportunity to mentor students on their Master’s projects, deliver seminars and lectures, and present my research at national and international conferences.
+          </p>
+          <p>I am currently undertaking a research period at EPFL, where I am working on the development of safe-by-design machine learning models to predict patients’ future glycemia.</p>
+          </p>
+          <p>Previously, I obtained my Master’s degree in Industrial Automation and my Bachelor’s degree in Industrial Engineering (Energy). My academic background includes signal processing, control systems, system identification, statistics, machine learning, electronics, and electrical machines.<p>
+          </p>
+          <p>In my free time, I enjoy reading, listening to podcasts, and going for walks in nature.</p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Current Position & Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Visiting Researcher / EPFL</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2025 - <span class="w3-tag w3-teal w3-round">Present</span></h6>
+          <p>Visiting period during my Ph.D. at the Dependable Control and Decision Group.</p>
+          <p>Research areas: Machine Learning model identification with stability and safety guarantees by design.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>PhD Student in Electronic, Computer Science and Electrical Engineering /  University of Pavia</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023 - Present</h6>
+          <p>Research areas: development of fault detection, signal processing, system identification, control design, and machine learning techniques to improve the performance and safety of artificial pancreas systems for diabetes patients.</p>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Tutor of Automatic Control, Physics, Electrotechnology and System identification / University of Pavia</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - Present</h6>
+          <p>Tutor for bachelor’s degrees in Electronic and Computer Engineering, Bioengineering, and Industrial Engineering.</p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Master Degree in Industrial Automation Engineering</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - 2023</h6>
+          <p><b>University of Pavia, Italy</b> | <i>110/110 cum Laude</i></p>
+          <p>During my master’s program, I completed coursework in advanced control techniques for industrial processes and electric motors, as well as statistical modeling and machine learning[cite: 28, 29].</p>
+          
+          <h6 class="w3-text-teal" style="margin-top:15px"><b>Master Thesis</b></h6>
+          <p><b>Title:</b> <i>Controller design and recipe optimization for an automated perfume ingredient dispenser</i></p>
+          <p style="text-align: justify;"><b>Abstract:</b> The thesis investigates the model identification and control and real-world implementation of an industrial system. A simulated environment was developed to recreate a flow control problem, where the controller was designed and validated. 
+          The solution was then implemented on real hardware in collaboration with a machinery manufacturing company for the cosmetics industry, involving PLC programming, inverter, sensor and actuator integration. The deployed system exhibited real-world behavior closely matching the simulation results, confirming effectiveness of the simulation-based design approach.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Bachelor Degree in Industrial Engineering (Energy)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2021</h6>
+          <p><b>University of Pavia, Italy</b> | <i>106/110</i></p>
+          
+          <h6 class="w3-text-teal" style="margin-top:15px"><b>Thesis</b></h6>
+          <p><b>Title:</b> <i>Realization and validation of the dynamic model of a double inverted pendulum.</i></p>
+          <p style="text-align: justify;"><b>Abstract:</b> The Thesis explores the realization and validation of the dynamic model of a rotating double inverted pendulum. A three-dimensional state-space model is developed to simulate the system dynamics and analyze its behavior. In addition, the work focuses on the setup and integration of the hardware components, including the power supply, H-bridge motor driver, sensors, and wiring. The system is interfaced with Arduino and Raspberry Pi to enable model validation and future controller integration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top" id="footer-segreto" style="display:none;">
+  <p>Paolo Alberto Mongini - CV Website</p>
+</footer>
+
+<script>
+const CHIAVE = "nvcvi";
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('pass') === CHIAVE) { mostraSito(); }
+
+function mostraLogin() {
+    document.getElementById("login-form").style.display = "block";
+}
+
+function controlla() {
+    if (document.getElementById("pass-input").value === CHIAVE) {
+        mostraSito();
+    } else {
+        alert("Password Errata!");
+    }
+}
+
+function mostraSito() {
+    document.getElementById("schermata-iniziale").style.display = "none";
+    document.getElementById("contenuto-segreto").style.display = "block";
+    document.getElementById("footer-segreto").style.display = "block";
+    document.body.style.backgroundColor = "#f1f1f1";
+}
+</script>
+
+</body>
+</html>
